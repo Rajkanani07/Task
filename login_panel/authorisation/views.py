@@ -65,7 +65,7 @@ class UserListApiView(APIView):
                 return Response({"message": "User deleted successfully"}, status=status.HTTP_204_NO_CONTENT)
             except User_Details.DoesNotExist:
                 return Response({"error": "User not found"}, status=status.HTTP_404_NOT_FOUND)
-        return Response({"error": "Please provide a username query parameter"}, status=status.HTTP_400_BAD_REQUEST)\
+        return Response({"error": "Please provide a username query parameter"}, status=status.HTTP_400_BAD_REQUEST)
         
 
 class LoginAPIView(APIView):
